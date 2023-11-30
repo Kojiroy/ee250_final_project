@@ -19,7 +19,7 @@ export default async function POST(req, res) {
       await connection.promise().query('INSERT INTO motion_data (SensorName, MotionValue, Date) VALUES (?, ?, ?)', [name, value, cur_date]);
     }
     else {
-      await connection.promise().query('INSERT INTO button_data (SensorName, count, Date) VALUES (?, ?, ?)', [name, value, cur_date]);
+      await connection.promise().query('INSERT INTO button_data (SensorName, Count, Date) VALUES (?, ?, ?)', [name, value, cur_date]);
     }
       res.status(200).json({ message: 'Item updated successfully' });
 
