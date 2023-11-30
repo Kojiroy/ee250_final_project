@@ -1,0 +1,4 @@
+
+# Hide all config files with passwords and such
+*/config.py
+*/run.sh

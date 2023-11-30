@@ -1,0 +1,41 @@
+
+
+.container {
+    background-color: rgb(var(--background-start-rgb));
+    width: 100vw;
+    height: auto;
+}
+
+.grid-container {
+    display: grid;
+    padding: 1rem;
+}
+
+.data {
+    background-color: rgb(var(--secondary-color));
+    max-width: 500px;
+    border-radius: 1rem;
+
+}
+.datas{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    display: flex;
+    font-size: large;
+    font-weight: 600;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: rgb(173, 72, 72);
+    text-align: center;
+    min-width: 100px;
+    max-width: 500px;
+    column-gap: 20px;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+}
