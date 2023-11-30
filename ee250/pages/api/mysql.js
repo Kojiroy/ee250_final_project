@@ -3,8 +3,8 @@ import mysql from 'mysql2';
 const connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: 'my-secret-pw',
-  database: 'sensors',
+  password: 'your_password',
+  database: 'sensor_db',
 });
 
 export default connection;
