@@ -1,9 +1,14 @@
-import datetime
+# GrovePi
 import grovepi
-import base64
-import requests
-from dateutil import parser
 import grove_rgb_lcd as lcd
+# HTTP Requests
+import requests
+# Showing time
+import datetime
+# Parsing data
+from dateutil import parser
+import base64
+# RSA Decryption
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives.asymmetric import padding
 from cryptography.hazmat.primitives import serialization, hashes
