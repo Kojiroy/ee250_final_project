@@ -11,7 +11,15 @@ export default async function GET(req, res) {
     await connection.promise().query(query)
     .then((_result) =>{
     result = _result[0][0];
-    console.log(_result[0][0]["LightValue"]);
+    if (type === "light"){
+      console.log(_result[0][0]["LightValue"]);
+    }
+    else if (type === "motion"){
+      console.log(_result[0][0]["MotionValue"]);
+    }
+    else if (type === "button"){
+      console.log(_result[0][0]["Count"]);
+    }
     })
     .catch((err) => {
         console.log(err);

@@ -16,12 +16,13 @@ print("*********************************")
 private_key = rsa.generate_private_key(
     public_exponent=65537,
     key_size=2048,
+    backend=default_backend()
 )
-
+# serialization.PrivateFormat.PK
 # Print Private Key
 private_pem = private_key.private_bytes(
     encoding=serialization.Encoding.PEM,
-    format=serialization.PrivateFormat.PKCS8,
+    format=serialization.PrivateFormat.PKCS12,
     encryption_algorithm=serialization.NoEncryption()
 )
 print(f"Private Key: {private_pem}")
