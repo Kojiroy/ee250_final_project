@@ -71,7 +71,7 @@ async function decrypt(message) {
 async function encrypt(int_message) {
   global.window = undefined;
   var message = int_message + '';
-  console.log(typeof(message));
+  // console.log(typeof(message));
   const JSEncrypt = (await import('jsencrypt')).default;
   const encrypt = new JSEncrypt();
   // encrypt.setPrivateKey(privateKey);
@@ -80,7 +80,7 @@ async function encrypt(int_message) {
   
   const encrypted_msg = encrypt.encrypt(message);
   console.log("Original Message: " + message);
-  console.log("Encrypted Message " + encrypted_msg);
+  // console.log("Encrypted Message " + encrypted_msg);
   return encrypted_msg;
 }
 
@@ -99,10 +99,10 @@ export default async function GET(req, res) {
       .then((encrypted_val) => {
         result["LightValue"] = encrypted_val;
         res.status(200).json({ message: 'Item updated successfully', body: result});
-        decrypt(result["LightValue"])
-        .then((data) => {
-          console.log(data);
-        })
+        // decrypt(result["LightValue"])
+        // .then((data) => {
+        //   console.log(data);
+        // })
         return encrypted_val;
       })
     }
@@ -111,10 +111,10 @@ export default async function GET(req, res) {
       .then((encrypted_val) => {
         result["MotionValue"] = encrypted_val;
         res.status(200).json({ message: 'Item updated successfully', body: result});
-        decrypt(result["MotionValue"])
-        .then((data) => {
-          console.log(data);
-        })
+        // decrypt(result["MotionValue"])
+        // .then((data) => {
+        //   console.log(data);
+        // })
         return encrypted_val;
       })
     }
@@ -123,10 +123,10 @@ export default async function GET(req, res) {
       .then((encrypted_val) => {
         result["Count"] = encrypted_val;
         res.status(200).json({ message: 'Item updated successfully', body: result});
-        decrypt(result["Count"])
-        .then((data) => {
-          console.log(data);
-        })
+        // decrypt(result["Count"])
+        // .then((data) => {
+        //   console.log(data);
+        // })
         return encrypted_val;
       })
     }
